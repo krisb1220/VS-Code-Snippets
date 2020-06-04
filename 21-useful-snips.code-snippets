@@ -1,0 +1,166 @@
+//=======================================================================================
+//				                        # VS CODE SNIPS # 
+//                  	         ## BY KRIS BAILLARGEON ##
+//			                 ### https://github.com/krisb1220/ ###
+//			               ### PLEASE STAR/FOLLOW IF YOU ENJOY :) ###
+//=======================================================================================
+
+
+//Add comment block in Javascript  ------ !cb
+//Add comment block in Javascript ------- !htmlcb
+//Bcrypt hash + return hash -------- !hash
+//Compare bcrypt hash ----- !hashcompare
+//Add a route with post|get and res.send|res.json|res.render ------- !route
+//Add a  post route with post|get and res.send|res.json|res.render -------- !post
+//Add a post with post|get and res.send|res.json|res.render ------ !get
+//Axios post ----- !axpost
+//Axios get ------- !axget
+//Axios -------- !axios with get|post|put
+//Require a module --- !reqmod
+//Require an internal module --- !reqint
+//Export a function -- exports.function = function(){} ---- !expfun
+//Export a global variable -- exports.var = var ------ !expvar
+//Export internal module.data -- exports.var = require("/data").data -----!expmod
+//Mongoose.connect  ------ !mongooseconnect
+//App.use() -------- !use
+//Init session -- App.use(session) with boilerplate options  ------- !session
+//Init passport  -------- !passport
+//Init session and passport in correct order -------- !sessionpassport
+//Start express app -- const app = express() ------- !app
+
+
+{
+	"Add comment block in Javascript": {
+		"prefix": "!cb",
+		"description": "JS/CSS Comment Block",
+		"body": "/*======================================\r# ${1:My Comment} #\r======================================*/"
+	},
+
+	"Add comment block in HTML": {
+		"prefix": "!htmlcb",
+		"description": "HTML comment block",
+		"body": "<!--\r======================================\r# ${1:My Comment} #\r======================================\r-->"
+	},
+
+	"Hash": {
+		"prefix": "!hash",
+		"description": "Bcrypt hash",
+		"body": "bcrypt.hashSync(${1:password}, ${2:saltRounds}, (err, hash) => {\r\tif (err) console.error(err)\r\telse return hash;\r})"
+	},
+
+	"Hash Compare": {
+		"prefix": "!hashcomp",
+		"description": "Bcrypt hash compare",
+		"body": "bcrypt.compareSync(${1:plain}, ${2:hashed})"
+	},
+
+	"Add a route": {
+		"prefix": "!route",
+		"description": "app.route()",
+		"body": "app.route('/${1:url}').${2|post,get|}((req, res)=>{\r\r\t${3|res.send(data),res.json(data), res.render(page)|}\r\r})"
+	},
+
+	"Add a get() route": {
+		"prefix": "!get",
+		"description": "app.route().get()",
+		"body": "app.route('/${1:url}').get((req, res)=>{\r\r\t${3|res.send(data),res.json(data), res.render(page)|}\r\r})"
+	},
+
+	"Add a post() route": {
+		"prefix": "!post",
+		"description": "app.route().post()",
+		"body": "app.route('/${1:url}').post((req, res)=>{\r\r\t${3|res.send(data),res.json(data), res.render(page)|}\r\r})"
+	},
+
+	"Axios post": {
+		"prefix": "!axpost",
+		"description": "Post data with Axios",
+		"body": "axios({\rmethod: 'post',\r\turl: `${1:url}`,\r\tdata: ${2:data},\r\tredirect: '${3:redirectOption}'\r\t})"
+	},
+
+	"Axios get": {
+		"prefix": "!axget",
+		"description": "Get data with Axios",
+		"body": "axios({\rmethod: 'get',\r\turl: `${1:url}`,\r\tdata: ${2:data},\r\tredirect: '${3:redirectOption}'\r\t})"
+	},
+
+	"Axios ": {
+		"prefix": "!axios",
+		"description": "Request with Axios",
+		"body": "axios({\rmethod: '${1|get, post, put|}',\r\turl: `${2:url}`,\r\tdata: ${3:data},\r\tredirect: '${4:redirectOption}'\r\t})"
+	},
+
+	"Require": {
+		"prefix": "!reqint",
+		"description": "Require internal module",
+		"body": "const ${1:varName} = require('./${2:directory}')"
+	},
+
+	"Require Module": {
+		"prefix": "!reqmod",
+		"description": "Require NPM module",
+		"body": "const ${1:varName} = require('${2:module}')"
+	},
+
+	"Export function": {
+		"prefix": "!expfun",
+		"description": "Export a function",
+		"body": "exports.${1:varName}  = function(${2:params}) {\r\t ${3:logic}\r}"
+	},
+
+	"Export Variable": {
+		"prefix": "!expvar",
+		"description": "Export a variable",
+		"body": "exports.${1:varName}  = ${2:varName2}"
+	},
+
+	"Export internal module data": {
+		"prefix": "!expmod",
+		"description": "export require().data",
+		"body": "exports.${1:varName}  = require('./${2:params}').data;"
+	},
+
+	"Mongoose connect": {
+		"prefix": "!mongoconnect",
+		"description": "mongoose.connect()",
+		"body": "mongoose.connect(process.env.DATABASE, {useUnifiedTopology:true, useNewUrlParser:true}, (err, db)=>{\r\r\t\tif(err) console.error(err); \r\t\telse{ \r\t\t\t${1:logic}\r\t\t}\r});"
+	},
+
+	"Use a middleware": {
+		"prefix": "!use",
+		"description": "app.use()",
+		"body": "app.use(${1:logic})"
+	},
+
+	"Use session": {
+		"prefix": "!session",
+		"description": "app.use(session)",
+		"body": "app.use(session({\r\tsecret: process.env.SECRET,\r\tsaveUninitialized: true,\r\tresave:true\r\t}))"
+	},
+
+	"Passport Init": {
+		"prefix": "!passport",
+		"description": "init passport",
+		"body": "app.use(session({\r\tsecret: process.env.SECRET,\r\tsaveUninitialized: true,\r\tresave:true\r\t}))\r\rapp.use(passport.initialize());\rapp.use(passport.session());"
+	},
+
+	"Passport Session Init": {
+		"prefix": "!sessionpassport",
+		"description": "init passport+session",
+		"body": "app.use(session({\r\tsecret: process.env.SECRET,\r\tsaveUninitialized: true,\r\tresave:true\r\t}))\r\rapp.use(passport.initialize());\rapp.use(passport.session());"
+	},
+	
+	"Start express app": {
+		"prefix": "!app",
+		"description": "app=express",
+		"body": "const app = express()"
+	},
+	
+
+	"Express Boiler Plate":{
+		"prefix": "!ebp",
+		"description": "Express boilerplate",
+		"body": "const express = require('express');\rconst session = require('express-session');\rconst bodyParser = require('body-parser');\rconst passport = require('passport');\rconst cookieParser = require('cookie-parser');\rconst mongoose = require('mongoose');\rconst dotenv = require('dotenv');\rconst routes = require('./routes/routes');\rconst auth = require('./auth/auth');\rconst Schemas = ('./database/schemas/schemas');\rconst mongooseOptions = {useUnifiedTopology:true, useNewUrlParser:true};\rconst app = express();\r\r\rdotenv.config();\rapp.use(express.static(__dirname+'/public'));\rapp.use(cookieParser());\rapp.use(bodyParser.json());\rapp.use(express.json())\rapp.use(bodyParser.urlencoded({ extended: true }));\rapp.set('view engine', 'pug')\r\rapp.use(session({\r\tsecret: process.env.SECRET,\r\tsaveUninitialized: true,\r\tresave:true\r}))\r\rapp.use(passport.initialize());\rapp.use(passport.session());\r\rmongoose.connect(process.env.DATABASE, mongooseOptions, (err, db)=>{\r\t\tif(err) console.error(err);  \r\t\telse { \r\t\t\tconsole.log('Connected to remote database'); \r\t\t\tauth(app, db); \r\t\t\troutes(app, db); \r}\r});\r\r// console.log(process.env);\r\rapp.listen(process.env.PORT||3000,()=>{\r\tconsole.log('App is listening on port ' + process.env.PORT);\r})\r" 
+	}
+
+}
