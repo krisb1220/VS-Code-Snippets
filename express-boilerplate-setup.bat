@@ -1,6 +1,7 @@
 echo > server.js
 echo > .env
 
+mkdir public
 mkdir auth 
 cd auth 
 echo > auth.js
@@ -18,10 +19,15 @@ mkdir routes
 cd routes 
 echo > routes.js 
 cd ../
-cd ../
 
-mkdir public
+call npm init
+echo ....
+echo .....
+echo ......
+echo .......
+echo ........
+echo ...........
+echo Running package install processes...........
 
-npm init
-
-
+call npm install express express-session body-parser passport mongoose dotenv cookie-parser
+call npm update
