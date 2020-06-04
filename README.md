@@ -7,7 +7,7 @@
 
 ## !ebp
 ```javascript
-    //!-----------BEFORE USING THIS, RUN THE BATCH FILE PROVIDED AND ADD YOUR MONGOOSE URI AS _DATABASE_ IN .ENV
+    //!-----------BEFORE USING THIS, RUN THE BATCH FILE PROVIDED AND ADD YOUR MONGOOSE URI AS ** DATABASE ** IN .ENV
     const express = require('express');
     const session = require('express-session');
     const bodyParser = require('body-parser');
