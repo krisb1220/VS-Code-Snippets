@@ -1,5 +1,5 @@
 # VS-Code-Snippets
-21 useful VSCode snippets that will save you DAYS over time when coding! The most useful being `!ebp`, which is a fully completed Express boilerplate with it's accompanying batch file that makes it so all you have to do is add `DATABASE=YOUR_MONGO_URI` and **you're done**! 
+21 useful VSCode snippets that will save you DAYS over time when coding! The most useful being `!ebp`, which is a fully completed Express project boilerplate with it's accompanying batch file that makes it so all you have to do is add `DATABASE=YOUR_MONGO_URI` in your `.env` and **you're done**! 
 
 ![example](https://i.gyazo.com/5799f622dc6e9f4ee1075bca3ccd2064.gif)
 
@@ -7,6 +7,7 @@
 
 ## !ebp
 ```javascript
+    //!-----------BEFORE USING THIS, RUN THE BATCH FILE PROVIDED AND ADD YOUR MONGOOSE URI AS _DATABASE_ IN .ENV
     const express = require('express');
     const session = require('express-session');
     const bodyParser = require('body-parser');
