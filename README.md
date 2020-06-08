@@ -1,13 +1,13 @@
 # VS-Code-Snippets
-21 useful VSCode snippets that will save you DAYS over time when coding! The most useful being `!ebp`, which is a fully completed Express project boilerplate with it's accompanying batch file that makes it so all you have to do is add `DATABASE=YOUR_MONGO_URI` in your `.env` and **you're done**! 
+23 useful VSCode snippets that will save you DAYS over time when coding!x The most useful being `!xebp`, which is a fully completed Express project boilerplate with it's accompanying batch file that makes it so all you have to do is add `DATABASE=YOUR_MONGO_URI` in your `.env` and **you're done**!x 
 
-![example](https://i.gyazo.com/5799f622dc6e9f4ee1075bca3ccd2064.gif)
+!x[example](https://i.gyazo.com/5799f622dc6e9f4ee1075bca3ccd2064.gif)
 
 # Commands
 
-## !ebp
+## !xebp
 ```javascript
-    //!-----------BEFORE USING THIS, RUN THE BATCH FILE PROVIDED AND ADD YOUR MONGOOSE URI AS ** DATABASE ** IN .ENV
+    //!x-----------BEFORE USING THIS, RUN THE BATCH FILE PROVIDED AND ADD YOUR MONGOOSE URI AS ** DATABASE ** IN .ENV
     const express = require('express');
     const session = require('express-session');
     const bodyParser = require('body-parser');
@@ -54,14 +54,14 @@
       console.log('App is listening on port ' + process.env.PORT);
     })
 ```
-## !cb 
+## !xcb 
 
 ```javascript
     /*======================================
     # My Comment #
     ======================================*/
 ```
-## !hash
+## !xhash
 ```javascript
     bcrypt.hashSync([password], [saltRounds], (err, hash) => {
       if (err) console.error(err)
@@ -69,12 +69,12 @@
     })  
 ```
 
-## !hashsync
+## !xhashsync
 ```javascript
     bcrypt.compareSync([plain], [hashed])
 ```
 
-## !route 
+## !xroute 
 ```javascript
     app.route(['/url']).[post||get]((req, res)=>{
 
@@ -82,7 +82,7 @@
 
     })
 ```
-## !post
+## !xpost
 ```javascript
     app.route(['/url']).post((req, res)=>{
 
@@ -90,7 +90,7 @@
 
     })
 ```
-## !get
+## !xget
 ```javascript
     app.route(['/url']).get((req, res)=>{
 
@@ -98,7 +98,7 @@
 
     })
 ```
-## !axios
+## !xaxios
 ```javascript
     axios({
     method: '[post||get]',
@@ -107,7 +107,7 @@
       redirect: '[redirectOption]'
       })
 ```
-## !axpost
+## !xaxpost
 ```javascript
     axios({
     method: 'get',
@@ -116,7 +116,7 @@
       redirect: '[redirectOption]'
     })
 ```
-## !axget
+## !xaxget
 ```javascript
     axios({
     method: 'get',
@@ -125,29 +125,29 @@
       redirect: '[redirectOption]'
     })
 ```
-## !reqint
+## !xreqint
 ```javascript
     const [varName] = require('./[directory]')
 ```
-## !reqmod
+## !xreqmod
  ```javascript   
     const [varName] = require('[module]')
 ```
-## !expfun
+## !xexpfun
 ```javascript
     exports.[varName]  = function([params]) {
       [logic]
     }
 ```
-## !expvar
+## !xexpvar
 ```javascript
     exports.[varName]  = [varName2]
 ```
-## !expmod
+## !xexpmod
 ```javascript
     exports.[varName]  = require('./[params]').data;
 ```
-## !mongooseconnect
+## !xmongooseconnect
 ```javascript
     mongoose.connect(process.env.DATABASE, {useUnifiedTopology:true, useNewUrlParser:true}, (err, db)=>{
 
@@ -157,12 +157,12 @@
         }
     });
 ```
-## !use
+## !xuse
 ```javascript
     app.use([logic])
 ```
 /*======================================
-# !session #
+# !xsession #
 ======================================*/
 ```javascript
     app.use(session({
@@ -171,12 +171,12 @@
       resave:true
     })) 
 ```
-## !passport
+## !xpassport
 ```javascript
     app.use(passport.initialize());
     app.use(passport.session());
 ```
-## !sessionpassport
+## !xsessionpassport
 ```javascript
     app.use(session({
       secret: process.env.SECRET,
@@ -188,7 +188,27 @@
     app.use(passport.session());
 
 ```
-## !app 
+## !xapp 
 
+## !xlistener 
 ```javascript
     const app = express() 
+    
+```javascript    
+ document.querySelector('[selector]').addEventListener('[listener]',(event)=>{
+ 
+   [data]
+ 
+ })
+```
+
+## !xlistenerall 
+```javascript
+ document.querySelectorAll('[query]').forEach((element)=>{
+ 
+   element.addEventListener('[listener]', (event)=>{
+     [doSomething()]
+   })
+ 
+ })
+ ```
