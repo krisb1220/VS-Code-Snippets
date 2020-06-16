@@ -1,7 +1,7 @@
 # VS-Code-Snippets
-23 useful VSCode snippets that will save you DAYS over time when coding!x The most useful being `!xebp`, which is a fully completed Express project boilerplate with it's accompanying batch file that makes it so all you have to do is add `DATABASE=YOUR_MONGO_URI` in your `.env` and **you're done**!x 
+23 useful VSCode snippets that will save you DAYS over time when coding! The most useful being `!xebp`, which is a fully completed Express project boilerplate with it's accompanying batch file that makes it so all you have to do is add `DATABASE=YOUR_MONGO_URI` in your `.env` and **you're done**!x
 
-!x[example](https://i.gyazo.com/5799f622dc6e9f4ee1075bca3ccd2064.gif)
+![example](https://i.gyazo.com/5799f622dc6e9f4ee1075bca3ccd2064.gif)
 
 # Commands
 
@@ -190,10 +190,11 @@
 ```
 ## !xapp 
 
-## !xlistener 
+
 ```javascript
     const app = express() 
-    
+```
+## !xlistener 
 ```javascript    
  document.querySelector('[selector]').addEventListener('[listener]',(event)=>{
  
