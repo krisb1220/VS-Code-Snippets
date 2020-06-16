@@ -69,7 +69,7 @@
     })  
 ```
 
-## !xhashsync
+## !xhashcomp
 ```javascript
     bcrypt.compareSync([plain], [hashed])
 ```
